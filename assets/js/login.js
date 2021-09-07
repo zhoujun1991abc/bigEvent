@@ -48,7 +48,7 @@ $(function() {
             data: $(this).serialize(), //快速获取表单数据
             success(res) {
                 if (res.status !== 0) {
-                    return layer.mgs("登录失败");
+                    return layer.msg("登录失败");
                 }
                 layer.msg("登录成功");
                 //将token字符串保存到localstrage种
