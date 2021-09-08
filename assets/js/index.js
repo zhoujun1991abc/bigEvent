@@ -19,7 +19,6 @@ function getUserInfo() {
         url: "/my/userinfo",
         method: "get",
         success: function(res) {
-            console.log(1111, res)
             if (res.status !== 0) {
                 return layui.layer.msg("获取用户信息失败");
             }
@@ -32,8 +31,7 @@ function getUserInfo() {
 
 //渲染用户头像
 function rederAvatar(user) {
-    console.log(user)
-        // 如果有用户昵称 先使用昵称 否则就用 用户的姓名
+    // 如果有用户昵称 先使用昵称 否则就用 用户的姓名
     var name = user.nickname || user.username;
     $("#welcome").html("欢迎" + name);
 
